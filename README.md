@@ -1,3 +1,3 @@
 PondyUniBot
 ===========
-python setup.py
+python app.py
