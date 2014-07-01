@@ -1,2 +1,3 @@
 PondyUniBot
 ===========
+python setup.py
