@@ -2,7 +2,7 @@ import csv
 import requests
 from bs4 import BeautifulSoup
 from fileinput import input, FileInput
-
+from mailsend import *
 headers = {"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"}
 
 path = 'result/output.csv'
@@ -19,7 +19,7 @@ def csv_writer(data, path):
 				writer.writerow(line)	
 
 
-def PondyUniBot(regpath):
+def PondyUniBot(regpath, emailtext):
 	#Sending request to get the sub names
 	f = open(regpath, "r")
 	for lines in f.readlines():
@@ -99,6 +99,12 @@ def PondyUniBot(regpath):
     		
 
     			csv_writer(data, path)
+			
 		else:
 			print "Connection error!! "
+	mail(emailtext,
+   "Pondicherry University marks",
+   "Please check out the attachment!, Thanks for using my service!",
+   "result/output.csv")
+
 
