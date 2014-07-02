@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from os import environ
+
 import smtplib
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEBase import MIMEBase
@@ -8,7 +8,7 @@ from email import Encoders
 import os
 
 gmail_user = "vikneshwaren.u@gmail.com"
-gmail_pwd = environ['MACETHIC']
+gmail_pwd = os.environ['MACETHIC']
 
 def mail(to, subject, text, attach):
    msg = MIMEMultipart()
