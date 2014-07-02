@@ -8,8 +8,7 @@ from email import Encoders
 import os
 
 gmail_user = "vikneshwaren.u@gmail.com"
-#gmail_pwd = os.environ['MACETHIC']
-gmail_pwd = 'Gurusamy!100002332555'
+gmail_pwd = os.environ['MACETHIC']
 def mail(to, subject, text, attach):
    msg = MIMEMultipart()
 
