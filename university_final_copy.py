@@ -106,5 +106,6 @@ def PondyUniBot(regpath, emailtext):
    "Pondicherry University marks",
    "Please check out the attachment!, Thanks for using my service!",
    "result/output.csv")
+	print "Mail sent to %s" % (emailtext)
 
 
